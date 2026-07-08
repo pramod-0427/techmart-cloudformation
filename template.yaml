@@ -8,6 +8,8 @@ Resources:
     Type: AWS::S3::Bucket
     Properties:
       BucketName: !Sub techmart-${AWS::AccountId}-${AWS::Region}
+      VersioningConfiguration:
+        Status: Enabled
       WebsiteConfiguration:
         IndexDocument: index.html
 
